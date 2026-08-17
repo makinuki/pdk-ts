@@ -46,25 +46,28 @@ function parseArgs(argv) {
   return args;
 }
 
-function main() {
+async function main() {
   const args = parseArgs(process.argv.slice(2));
   const outDir = path.dirname(path.resolve(args.output));
   const bundleFile = path.join(outDir, "." + path.basename(args.output, ".wasm") + ".bundle.js");
 
   fs.mkdirSync(outDir, { recursive: true });
 
-  build({
-    entryPoints: [path.resolve(args.input)],
-    outfile: bundleFile,
-    bundle: true,
-    format: "cjs",
-    target: ["es2020"],
-    platform: "neutral",
-    legalComments: "none",
-  }).catch((err) => {
+  try {
+    await build({
+      entryPoints: [path.resolve(args.input)],
+      outfile: bundleFile,
+      bundle: true,
+      format: "cjs",
+      target: ["es2020"],
+      platform: "neutral",
+      mainFields: ["main", "module"],
+      legalComments: "none",
+    });
+  } catch (err) {
     console.error("esbuild failed:", err.message);
     process.exit(1);
-  });
+  }
 
   const compilerArgs = [bundleFile, "-i", path.resolve(args.interface), "-o", path.resolve(args.output)];
   if (args.skipOpt) {
