@@ -75,6 +75,7 @@ export interface MangaDetails {
 export interface ChapterItem {
   id: string;
   number: number | null;
+  language?: string;
   title?: string;
   uploadedAt?: number;
   scanlator?: string;
