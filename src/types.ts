@@ -37,6 +37,7 @@ export interface SourceMetadata {
   baseUrl: string;
   iconUrl: string;
   nsfw: boolean;
+  allowedHosts?: string[];
 }
 
 export interface SearchQuery {
