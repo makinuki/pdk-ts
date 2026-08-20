@@ -47,8 +47,8 @@ Keep these constraints in mind:
   fail esbuild bundling under `platform: neutral`. Never import packages that
   pull Node.js builtins transitively.
 - The build resolves packages through the `main` and `module` fields.
-  Dependencies exposing only a TypeScript entry point (for example
-  `link:`-linked local packages) must ship a JS `main` or `module` field.
+  Dependencies exposing only a TypeScript entry point must ship a JS
+  `main` or `module` field.
 - Live-host testing uses Extism async host functions, which require
   WebAssembly Suspending (JSPI). Node 22 keeps JSPI behind the
   `--experimental-wasm-jspi` flag; run harnesses and local runners with
