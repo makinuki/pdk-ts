@@ -1,9 +1,12 @@
 {
   "name": "@makinuki/pdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "TypeScript PDK for building MakiNuki WASM scraper plugins",
   "license": "MIT",
-  "author": { "name": "Byururu-sama", "url": "https://github.com/Byururu-sama" },
+  "author": {
+    "name": "Byururu-sama",
+    "url": "https://github.com/Byururu-sama"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/makinuki/pdk-ts.git"
