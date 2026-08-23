@@ -55,7 +55,7 @@ export interface PageResult<T> {
 export interface MangaItem {
   id: string;
   title: string;
-  coverUrl: string;
+  coverUrl?: string;
   latestChapter?: string;
   url?: string;
 }
@@ -69,13 +69,14 @@ export interface MangaDetails {
   artists?: string[];
   genres?: string[];
   status: "Ongoing" | "Completed" | "Hiatus" | "Cancelled" | "Unknown";
-  coverUrl: string;
+  coverUrl?: string;
   chapters: ChapterItem[];
 }
 
 export interface ChapterItem {
   id: string;
   number: number | null;
+  volume?: number;
   language?: string;
   title?: string;
   uploadedAt?: number;
