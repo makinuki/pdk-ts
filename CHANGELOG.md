@@ -2,6 +2,10 @@
 
 All notable changes to the MakiNuki TypeScript PDK are recorded here. Contract changes follow the ABI versioning policy (spec, SPECIFICATION.md Section 7).
 
+## [Unreleased]
+
+- Added optional `allowedHosts?: string[]` to `SourceMetadata`, mirroring the spec addition that lets sources declare extra image/CDN hosts for transport allowlists.
+
 ## [1.0.0] - 2026-08-17
 
 - Released in lockstep with spec v1.0.0 (ABI 1 frozen).
