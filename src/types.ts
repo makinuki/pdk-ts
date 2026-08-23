@@ -58,6 +58,13 @@ export interface MangaItem {
   coverUrl?: string;
   latestChapter?: string;
   url?: string;
+  covers?: CoverVariant[];
+}
+
+export interface CoverVariant {
+  url: string;
+  width?: number;
+  height?: number;
 }
 
 export interface MangaDetails {
@@ -71,6 +78,7 @@ export interface MangaDetails {
   status: "Ongoing" | "Completed" | "Hiatus" | "Cancelled" | "Unknown";
   coverUrl?: string;
   chapters: ChapterItem[];
+  covers?: CoverVariant[];
 }
 
 export interface ChapterItem {

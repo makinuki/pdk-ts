@@ -2,6 +2,10 @@
 
 All notable changes to the MakiNuki TypeScript PDK are recorded here. Contract changes follow the ABI versioning policy (spec, SPECIFICATION.md Section 7).
 
+## [Unreleased]
+
+- Added `CoverVariant` and optional `covers?: CoverVariant[]` on `MangaItem` and `MangaDetails`, completing the spec 1.2 contract for multi-resolution cover metadata.
+
 ## [1.2.0] - 2026-08-23
 
 - Made `coverUrl` optional on `MangaItem` and `MangaDetails`, mirroring the spec change that lets plugins omit it when a title has no usable artwork.
