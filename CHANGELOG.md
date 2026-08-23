@@ -2,7 +2,7 @@
 
 All notable changes to the MakiNuki TypeScript PDK are recorded here. Contract changes follow the ABI versioning policy (spec, SPECIFICATION.md Section 7).
 
-## [Unreleased]
+## [1.2.0] - 2026-08-23
 
 - Made `coverUrl` optional on `MangaItem` and `MangaDetails`, mirroring the spec change that lets plugins omit it when a title has no usable artwork.
 - Added optional `volume?: number` to `ChapterItem`, mirroring the spec addition for volume grouping.
