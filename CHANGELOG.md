@@ -2,7 +2,7 @@
 
 All notable changes to the MakiNuki TypeScript PDK are recorded here. Contract changes follow the ABI versioning policy (spec, SPECIFICATION.md Section 7).
 
-## [Unreleased]
+## [1.3.0] - 2026-08-23
 
 - Added `CoverVariant` and optional `covers?: CoverVariant[]` on `MangaItem` and `MangaDetails`, completing the spec 1.2 contract for multi-resolution cover metadata.
 
